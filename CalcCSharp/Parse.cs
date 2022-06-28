@@ -63,7 +63,7 @@ namespace CalcCSharp
             object result = methodInfo.Invoke(null, new object[] { num });
             return (double)result;
         }
-        public void parseAndCalc()
+        public Complex parseAndCalc()
         {
 
             CheckExpression checkStr = new CheckExpression(expression);
@@ -210,6 +210,7 @@ namespace CalcCSharp
             {
                 calculateToFar();
             }
+            return complexStack.Pop();
         }
         private void handleRightBrace()//处理右括号
         {
