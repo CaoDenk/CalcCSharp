@@ -72,6 +72,9 @@ namespace CalcCSharp
             {
                 switch (expression[i])
                 {
+                    case ' ':
+                    case '\t':
+                        break;
                     case '+':
                     case '-':
                         if (isSign(i))
